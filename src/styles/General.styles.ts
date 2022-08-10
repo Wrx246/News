@@ -10,11 +10,16 @@ export const GeneralWrapper = styled.section`
     grid-gap: 15px;
 `;
 
-export const GeneralBoxFirst = styled.div`
+interface IGeneralBox {
+    image: string
+}
+
+export const GeneralBoxFirst = styled.div<IGeneralBox>`
     grid-area: first;
     max-width: 670px;
     max-height: 570px;
     background-size: 100%;
+    background: url(${props => props.image});
     background-color: green;
     font-weight: 500;
     font-size: 36px;
@@ -26,12 +31,13 @@ export const GeneralBoxFirst = styled.div`
     justify-content: space-between;
 `;
 
-export const GeneralBoxSecond = styled.div`
+export const GeneralBoxSecond = styled.div<IGeneralBox>`
     grid-area: second;
     max-width: 670px;
     max-height: 570px;
     background-size: 100%;
     background-color: green;
+    background: url(${props => props.image});
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
@@ -42,12 +48,13 @@ export const GeneralBoxSecond = styled.div`
     justify-content: space-between;
 `;
 
-export const GeneralBoxThird = styled.div`
+export const GeneralBoxThird = styled.div<IGeneralBox>`
     grid-area: third;
     max-width: 670px;
     max-height: 570px;
     background-size: 100%;
     background-color: green;
+    background: url(${props => props.image});
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
@@ -58,12 +65,13 @@ export const GeneralBoxThird = styled.div`
     justify-content: space-between;
 `;
 
-export const GeneralBoxFourth = styled.div`
+export const GeneralBoxFourth = styled.div<IGeneralBox>`
     grid-area: fourth;
     max-width: 670px;
     max-height: 570px;
     background-size: 100%;
     background-color: green;
+    background: url(${props => props.image});
     font-size: 24px;
     line-height: 36px;
     color: #FFFFFF;

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { API } from '../../API/urlConfig';
 import {
     GeneralBoxFirst,
     GeneralBoxSecond,
@@ -8,36 +9,53 @@ import {
     LinkCategory,
     LinkTitle
 } from '../../styles/General.styles'
+import { INews } from '../../types/types';
 
 export const General = () => {
+    const [general, setGeneral] = useState<INews[]>([]);
+
+    const fetchNews = async () => {
+        await API.get(`?q=general&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
+            .then(res => {
+                setGeneral(res.data.articles)
+            })
+    }
+
+    useEffect(() => {
+        fetchNews();
+    }, []);
+
+    if(general.length) {
     return <GeneralWrapper>
-        <GeneralBoxFirst>
-            <LinkCategory>Buisness</LinkCategory>
+        <GeneralBoxFirst image={general[0].urlToImage}>
+            <LinkCategory>General</LinkCategory>
             <LinkTitle size='12px' height='106px' width='478px'>
-                <p>Craig Bator - 27 Dec 2020</p>
-                <h3>After all is said and done, more is done</h3>
+                <p>{general[0].author} - {general[0].publishedAt}</p>
+                <h3>{general[0].title}</h3>
             </LinkTitle>
         </GeneralBoxFirst>
-        <GeneralBoxSecond>
-            <LinkCategory>Buisness</LinkCategory>
+        <GeneralBoxSecond image={general[1].urlToImage}>
+            <LinkCategory>General</LinkCategory>
             <LinkTitle size='10px' height='42px' width='165px'>
-                <p>Craig Bator - 27 Dec 2020</p>
-                <h3>After all is said and done, more is done</h3>
+                <p>{general[1].author} - {general[1].publishedAt}</p>
+                <h3>{general[1].title}</h3>
             </LinkTitle>
         </GeneralBoxSecond>
-        <GeneralBoxThird>
-            <LinkCategory>Buisness</LinkCategory>
+        <GeneralBoxThird image={general[5].urlToImage}>
+            <LinkCategory>General</LinkCategory>
             <LinkTitle size='10px' height='42px' width='165px'>
-                <p>Craig Bator - 27 Dec 2020</p>
-                <h3>After all is said and done, more is done</h3>
+                <p>{general[5].author} - {general[5].publishedAt}</p>
+                <h3>{general[5].title}</h3>
             </LinkTitle>
         </GeneralBoxThird>
-        <GeneralBoxFourth>
-            <LinkCategory>Buisness</LinkCategory>
-            <LinkTitle size='12px' height='72px' width='295px'>
-                <p>Craig Bator - 27 Dec 2020</p>
-                <h3>After all is said and done, more is done</h3>
+        <GeneralBoxFourth image={general[3].urlToImage}>
+            <LinkCategory>General</LinkCategory>
+            <LinkTitle size='12px' height='72px' width='360px'>
+                <p>{general[3].author} - {general[3].publishedAt}</p>
+                <h3>{general[3].title}</h3>
             </LinkTitle>
         </GeneralBoxFourth>
     </GeneralWrapper>
+    }
+    return <></>
 }
