@@ -1,10 +1,17 @@
 import React from 'react';
+import { General } from './components/general/General';
+import { Header } from './components/header/Header';
+import { AppWrapper } from './styles/App.styles';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      Hello!
-    </div>
+    <AppWrapper>
+      <Header />
+      <General />
+    </AppWrapper>
   );
 }
 
