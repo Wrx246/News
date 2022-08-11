@@ -9,15 +9,21 @@ export const NavigationWrapper = styled.nav`
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 `;
 
-export const NavigationItem = styled.div`
+interface INav {
+    color: string
+    background: string
+}
+
+export const NavigationItem = styled.div<INav>`
     padding: 15px 12.5px;
     font-size: 20px;
     line-height: 30px;
     color: #FFFFFF;
+    background: ${props => props.background || '#393939'};
     &:hover {
         cursor: pointer;
         transition: .2s;
-        color: #F65050;
+        color: ${props => props.background || '#F65050'};
     }
     &:active {
         transition: .2s;
