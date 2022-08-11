@@ -1,4 +1,5 @@
 import React from 'react';
+import { Footer } from './components/general/Footer';
 import { General } from './components/general/General';
 import { Health } from './components/general/Health';
 import { Life } from './components/general/Life';
@@ -14,9 +15,10 @@ function App() {
     <AppWrapper>
       <Header />
       <General />
-      <Technology />
       <Health />
+      <Technology />
       <Life />
+      <Footer />
     </AppWrapper>
   );
 }
