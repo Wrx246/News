@@ -15,7 +15,7 @@ export const NewsList = () => {
   const country = ['us', 'ru', 'ua', 'lv', 'kr', 'ng', 'br', 'sg'];
 
   const fetchHealth = async (path: string | undefined) => {
-    await API.get(`everything?pageSize=10&page=${currentPage}&q=${path}&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
+    await API.get(`?pageSize=10&page=${currentPage}&q=${path}&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
       .then(res => {
         setHealth([...health, ...res.data.articles])
         setCurrentPage(prevState => prevState + 1)

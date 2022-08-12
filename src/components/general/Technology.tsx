@@ -10,7 +10,7 @@ export const Technology = () => {
     const tech = technology.slice(1, 4);
 
     const fetchNews = async () => {
-        await API.get(`everything?q=technology&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
+        await API.get(`?q=technology&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
             .then(res => {
                 setTechnology(res.data.articles)
             })

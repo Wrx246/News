@@ -16,7 +16,7 @@ export const General = () => {
     const [general, setGeneral] = useState<INews[]>([]);
 
     const fetchNews = async () => {
-        await API.get(`everything?q=general&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
+        await API.get(`?q=general&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
             .then(res => {
                 setGeneral(res.data.articles)
             })

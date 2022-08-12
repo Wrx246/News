@@ -10,7 +10,7 @@ export const Life = () => {
     const mapLife = life.slice(0, 3);
 
     const fetchNews = async () => {
-        await API.get(`everything?q=life&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
+        await API.get(`?q=life&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
             .then(res => {
                 setLife(res.data.articles)
             })

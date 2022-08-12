@@ -7,6 +7,7 @@ import { Life } from './components/general/Life';
 import { Main } from './components/general/Main';
 import { Technology } from './components/general/Technology';
 import { Header } from './components/header/Header';
+import { InfoPanel } from './components/header/InfoPanel';
 import { NewsList } from './components/page/NewsList';
 import { AppWrapper } from './styles/App.styles';
 
@@ -15,6 +16,8 @@ import { AppWrapper } from './styles/App.styles';
 
 function App() {
   return (
+    <>
+    <InfoPanel />
     <AppWrapper>
       <Header />
       <Routes>
@@ -22,8 +25,9 @@ function App() {
         <Route path='/general' element={<Main />} />
         <Route path='/:path' element={<NewsList />} />
       </Routes>
-      <Footer />
     </AppWrapper>
+    <Footer />
+    </>
   );
 }
 
