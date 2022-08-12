@@ -45,6 +45,13 @@ export const LifeSectionFirst = styled.article`
         line-height: 36px;
         color: #393939;
     }
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: #484848;
+        }
+    }
     p {
         font-family: ${props => props.theme.font.secondary};
         margin-top: 12px;
@@ -75,6 +82,13 @@ export const LifeItemTitle = styled.div`
         line-height: 100.9%;
         color: #393939;
         margin-bottom: 6px;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: #484848;
+        }
     }
     h3 {
         font-weight: 400;

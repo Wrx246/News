@@ -20,6 +20,14 @@ export const ItemTitle = styled.div`
         color: #393939;
         margin-bottom: 12px;
     }
+
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: #484848;
+        }
+    }
     h3 {
         font-weight: 500;
         font-size: 15px;

@@ -28,16 +28,24 @@ export const Technology = () => {
                 <TechMainNews image={technology[0].urlToImage}>
                     <LinkCategory>Technology</LinkCategory>
                     <TechTitle>
-                        <h3>{technology[0].title}</h3>
+                        <a target='_blank' href={technology[0].url}>
+                            <h3>{technology[0].title}</h3>
+                        </a>
                         <hr />
                         <p>{technology[0].description}</p>
                     </TechTitle>
                 </TechMainNews>
                 <TechItemWrap>
                     {tech.map((item, index) => {
-                        const { author, title, urlToImage, publishedAt } = item;
+                        const { author, title, urlToImage, publishedAt, url } = item;
                         return (
-                            <TechItem key={index} publishedAt={publishedAt} author={author} title={title} urlToImage={urlToImage} />
+                            <TechItem 
+                            key={index} 
+                            publishedAt={publishedAt} 
+                            author={author} 
+                            title={title} 
+                            url={url}
+                            urlToImage={urlToImage} />
                         )
                     })}
                 </TechItemWrap>

@@ -26,39 +26,45 @@ export const General = () => {
         fetchNews();
     }, []);
 
-    let moment = require('moment');
-
-    if(general.length) {
-    return <GeneralWrapper>
-        <GeneralBoxFirst image={general[0].urlToImage}>
-            <LinkCategory>General</LinkCategory>
-            <LinkTitle size='12px' height='106px' width='478px'>
-                <p>{general[0].author} - {Moment(general[0].publishedAt).format('d MMM YYYY')}</p>
-                <h3>{general[0].title}</h3>
-            </LinkTitle>
-        </GeneralBoxFirst>
-        <GeneralBoxSecond image={general[1].urlToImage}>
-            <LinkCategory>General</LinkCategory>
-            <LinkTitle size='10px' height='42px' width='165px'>
-                <p>{general[1].author} - {Moment(general[1].publishedAt).format('d MMM YYYY')}</p>
-                <h3>{general[1].title}</h3>
-            </LinkTitle>
-        </GeneralBoxSecond>
-        <GeneralBoxThird image={general[5].urlToImage}>
-            <LinkCategory>General</LinkCategory>
-            <LinkTitle size='10px' height='42px' width='165px'>
-                <p>{general[5].author} - {Moment(general[5].publishedAt).format('d MMM YYYY')}</p>
-                <h3>{general[5].title}</h3>
-            </LinkTitle>
-        </GeneralBoxThird>
-        <GeneralBoxFourth image={general[3].urlToImage}>
-            <LinkCategory>General</LinkCategory>
-            <LinkTitle size='12px' height='72px' width='360px'>
-                <p>{general[3].author} - {Moment(general[3].publishedAt).format('d MMM YYYY')}</p>
-                <h3>{general[3].title}</h3>
-            </LinkTitle>
-        </GeneralBoxFourth>
-    </GeneralWrapper>
+    if (general.length) {
+        return <GeneralWrapper>
+            <GeneralBoxFirst image={general[0].urlToImage}>
+                <LinkCategory>General</LinkCategory>
+                <LinkTitle size='12px' height='106px' width='478px'>
+                    <p>{general[0].author} - {Moment(general[0].publishedAt).format('d MMM YYYY')}</p>
+                    <a target='_blank' href={general[0].url}>
+                        <h3>{general[0].title}</h3>
+                    </a>
+                </LinkTitle>
+            </GeneralBoxFirst>
+            <GeneralBoxSecond image={general[1].urlToImage}>
+                <LinkCategory>General</LinkCategory>
+                <LinkTitle size='10px' height='62px' width='165px'>
+                    <p>{general[1].author} - {Moment(general[1].publishedAt).format('d MMM YYYY')}</p>
+                    <a target='_blank' href={general[1].url}>
+                        <h3>{general[1].title}</h3>
+                    </a>
+                </LinkTitle>
+            </GeneralBoxSecond>
+            <GeneralBoxThird image={general[5].urlToImage}>
+                <LinkCategory>General</LinkCategory>
+                <LinkTitle size='10px' height='42px' width='165px'>
+                    <p>{general[5].author} - {Moment(general[5].publishedAt).format('d MMM YYYY')}</p>
+                    <a target='_blank' href={general[5].url}>
+                        <h3>{general[5].title}</h3>
+                    </a>
+                </LinkTitle>
+            </GeneralBoxThird>
+            <GeneralBoxFourth image={general[3].urlToImage}>
+                <LinkCategory>General</LinkCategory>
+                <LinkTitle size='12px' height='72px' width='360px'>
+                    <p>{general[3].author} - {Moment(general[3].publishedAt).format('d MMM YYYY')}</p>
+                    <a target='_blank' href={general[3].url}>
+                        <h3>{general[3].title}</h3>
+                    </a>
+                </LinkTitle>
+            </GeneralBoxFourth>
+        </GeneralWrapper>
     }
     return <></>
 }

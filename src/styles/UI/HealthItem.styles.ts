@@ -24,6 +24,14 @@ export const HealthWrapBody = styled.div`
         color: #393939;
     }
 
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: #484848;
+        }
+    }
+
     h2 {
         margin-top: 4px;
         font-weight: 500;

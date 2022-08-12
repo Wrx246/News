@@ -29,17 +29,20 @@ export const Health = () => {
                 <HealthMainNews>
                     <img src={health[0].urlToImage} alt={health[0].description} />
                     <span>{health[0].author} - {Moment(health[0].publishedAt).format('d MMM YYYY')}</span>
+                    <a target='_blank' href={health[0].url}>
                     <h2>{health[0].title}</h2>
+                    </a>
                     <p>{health[0].description}</p>
                 </HealthMainNews>
                 <HealthColumn>
                     {heal.map((item, index) => {
-                        const { title, author, publishedAt, urlToImage } = item;
+                        const { title, author, publishedAt, urlToImage, url } = item;
                         return (
                             <HealthItem 
                             key={index}
                              title={title} 
                              author={author}
+                             url={url}
                              publishedAt={publishedAt}
                              urlToImage={urlToImage} />
                         )

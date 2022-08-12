@@ -105,6 +105,13 @@ export const LinkTitle = styled.div<ILinkTitle>`
     position: relative;
     bottom: 25px;
     left: 25px;
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: #484848;
+        }
+    }
     p {
         font-family: ${props => props.theme.font.secondary};
         font-size: ${props => props.size};

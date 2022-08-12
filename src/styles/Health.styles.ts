@@ -36,6 +36,14 @@ export const HealthMainNews = styled.article`
         color: #393939;
     }
 
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: #484848;
+        }
+    }
+
     h2 {
         margin-top: 6px;
         font-weight: 500;

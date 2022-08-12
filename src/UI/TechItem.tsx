@@ -7,14 +7,17 @@ interface ITechItem {
     author: string
     urlToImage: string
     publishedAt: string | undefined
+    url: string
 }
 
-export const TechItem = ({title, author, urlToImage, publishedAt}: ITechItem) => {
+export const TechItem = ({ title, author, urlToImage, publishedAt, url }: ITechItem) => {
     return <ItemWrapper>
         <img src={urlToImage} alt={title} />
         <ItemTitle>
             <p>{author} - {Moment(publishedAt).format('d MMM YYYY')}</p>
-            <h4>{title}</h4>
+            <a target='_blank' href={url}>
+                <h3>{title}</h3>
+            </a>
         </ItemTitle>
     </ItemWrapper>
 }

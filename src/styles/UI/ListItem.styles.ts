@@ -27,6 +27,9 @@ export const ListItemBody = styled.div`
         line-height: 36px;
         text-transform: capitalize;
         color: #393939;
+        &:hover {
+            color: #7c7b7b;
+        }
     }
     p {
         width: 70%;

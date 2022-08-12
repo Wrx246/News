@@ -42,6 +42,13 @@ export const TechTitle = styled.div`
         color: #FFFFFF;
         margin-bottom: 29px;
     }
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: #484848;
+        }
+    }
 
     p {
         font-family: ${props => props.theme.font.secondary};

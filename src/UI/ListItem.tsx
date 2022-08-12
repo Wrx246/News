@@ -5,17 +5,18 @@ import { ListItemBody, ListItemWrap } from '../styles/UI/ListItem.styles'
 interface IList {
     author: string
     title: string
+    url: string
     urlToImage: string
     description: string
     publishedAt: string | undefined
 }
 
-export const ListItem = ({author, title, urlToImage, description, publishedAt}: IList) => {
+export const ListItem = ({author, title, urlToImage, description, url, publishedAt}: IList) => {
   return <ListItemWrap>
     <img src={urlToImage} alt={description} />
     <ListItemBody>
         <span>{author} - {Moment(publishedAt).format('d MMM YYYY')}</span>
-        <h3>{title}</h3>
+        <a target='_blank' href={url} style={{textDecoration: 'none'}}><h3>{title}</h3></a>
         <p>{description}</p>
     </ListItemBody>
   </ListItemWrap>

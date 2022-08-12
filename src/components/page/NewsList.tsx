@@ -24,11 +24,12 @@ export const NewsList = () => {
 
   return <NewsListWrap>
     {heal.map((item, index) => {
-        const {author, title, urlToImage, description, publishedAt} = item;
+        const {author, title, urlToImage, description, publishedAt, url} = item;
         return <ListItem 
         key={index} 
         author={author} 
         title={title} 
+        url={url}
         urlToImage={urlToImage} 
         description={description}
         publishedAt={publishedAt}
