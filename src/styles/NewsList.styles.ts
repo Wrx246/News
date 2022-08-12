@@ -6,3 +6,11 @@ export const NewsListWrap = styled.section`
     flex-direction: column;
     gap: 50px;
 `;
+
+export const CountryWrap = styled.div`
+    height: 30px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+`;

@@ -11,7 +11,7 @@ export const Health = () => {
     const heal = health.slice(1, 6);
 
     const fetchHealth = async () => {
-        await API.get(`?q=health&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
+        await API.get(`everything?q=health&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
             .then(res => {
                 setHealth(res.data.articles)
             })
