@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Moment from 'moment';
 import { API } from '../../API/urlConfig';
 import { HealthBanner, HealthBody, HealthColumn, HealthMainNews, HealthWrapper } from '../../styles/Health.styles'
 import { INews } from '../../types/types';
@@ -27,7 +28,7 @@ export const Health = () => {
             <HealthBody>
                 <HealthMainNews>
                     <img src={health[0].urlToImage} alt={health[0].description} />
-                    <span>{health[0].author} - {health[0].publishedAt}</span>
+                    <span>{health[0].author} - {Moment(health[0].publishedAt).format('d MMM YYYY')}</span>
                     <h2>{health[0].title}</h2>
                     <p>{health[0].description}</p>
                 </HealthMainNews>

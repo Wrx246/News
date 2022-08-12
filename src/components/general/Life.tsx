@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Moment from 'moment'
 import { API } from '../../API/urlConfig';
 import { LifeBody, LifeItem, LifeItemTitle, LifeSectionFirst, LifeWrapper } from '../../styles/Life.styles'
 import { INews } from '../../types/types';
@@ -27,21 +28,21 @@ export const Life = () => {
                 <div>
                     <LifeSectionFirst>
                         <img src={life[0].urlToImage} alt={life[0].description} />
-                        <span>{life[0].author} - {life[0].publishedAt}</span>
+                        <span>{life[0].author} - {Moment(life[0].publishedAt).format('d MMM YYYY')}</span>
                         <h2>{life[0].title}</h2>
                         <p>{life[0].description}</p>
                     </LifeSectionFirst>
                     <LifeItem>
                         <img src={life[2].urlToImage} alt={life[2].description} />
                         <LifeItemTitle>
-                            <span>{life[2].author} - {life[2].publishedAt}</span>
+                            <span>{life[2].author} - {Moment(life[2].publishedAt).format('d MMM YYYY')}</span>
                             <h3>{life[2].title}</h3>
                         </LifeItemTitle>
                     </LifeItem>
                     <LifeItem>
                         <img src={life[3].urlToImage} alt={life[3].description} />
                         <LifeItemTitle>
-                            <span>{life[3].author} - {life[3].publishedAt}</span>
+                            <span>{life[3].author} - {Moment(life[3].publishedAt).format('d MMM YYYY')}</span>
                             <h3>{life[3].title}</h3>
                         </LifeItemTitle>
                     </LifeItem>
@@ -49,21 +50,21 @@ export const Life = () => {
                 <div>
                     <LifeSectionFirst>
                         <img src={life[1].urlToImage} alt={life[1].description} />
-                        <span>{life[1].author} - {life[1].publishedAt}</span>
+                        <span>{life[1].author} - {Moment(life[1].publishedAt).format('d MMM YYYY')}</span>
                         <h2>{life[1].title}</h2>
                         <p>{life[1].description}</p>
                     </LifeSectionFirst>
                     <LifeItem>
                         <img src={life[4].urlToImage} alt={life[4].description} />
                         <LifeItemTitle>
-                            <span>{life[4].author} - {life[4].publishedAt}</span>
+                            <span>{life[4].author} - {Moment(life[4].publishedAt).format('d MMM YYYY')}</span>
                             <h3>{life[4].title}</h3>
                         </LifeItemTitle>
                     </LifeItem>
                     <LifeItem>
                         <img src={life[5].urlToImage} alt={life[5].description} />
                         <LifeItemTitle>
-                            <span>{life[5].author} - {life[5].publishedAt}</span>
+                            <span>{life[5].author} - {Moment(life[5].publishedAt).format('d MMM YYYY')}</span>
                             <h3>{life[5].title}</h3>
                         </LifeItemTitle>
                     </LifeItem>

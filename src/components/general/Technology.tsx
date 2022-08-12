@@ -35,9 +35,9 @@ export const Technology = () => {
                 </TechMainNews>
                 <TechItemWrap>
                     {tech.map((item, index) => {
-                        const { author, title, urlToImage } = item;
+                        const { author, title, urlToImage, publishedAt } = item;
                         return (
-                            <TechItem key={index} author={author} title={title} urlToImage={urlToImage} />
+                            <TechItem key={index} publishedAt={publishedAt} author={author} title={title} urlToImage={urlToImage} />
                         )
                     })}
                 </TechItemWrap>

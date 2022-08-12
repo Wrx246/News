@@ -1,4 +1,5 @@
 import React from 'react'
+import Moment from 'moment'
 import { ListItemBody, ListItemWrap } from '../styles/UI/ListItem.styles'
 
 interface IList {
@@ -13,7 +14,7 @@ export const ListItem = ({author, title, urlToImage, description, publishedAt}: 
   return <ListItemWrap>
     <img src={urlToImage} alt={description} />
     <ListItemBody>
-        <span>{author} - {publishedAt}</span>
+        <span>{author} - {Moment(publishedAt).format('d MMM YYYY')}</span>
         <h3>{title}</h3>
         <p>{description}</p>
     </ListItemBody>
