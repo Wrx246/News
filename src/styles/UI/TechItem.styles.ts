@@ -14,6 +14,7 @@ export const ItemWrapper = styled.article`
 export const ItemTitle = styled.div`
 
     p {
+        font-family: ${props => props.theme.font.secondary};
         font-size: 10px;
         line-height: 100.9%;
         color: #393939;

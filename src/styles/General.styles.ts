@@ -73,7 +73,7 @@ export const GeneralBoxFourth = styled.div<IGeneralBox>`
     background-color: green;
     background: url(${props => props.image});
     font-size: 24px;
-    line-height: 36px;
+    line-height: 30px;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -106,6 +106,7 @@ export const LinkTitle = styled.div<ILinkTitle>`
     bottom: 25px;
     left: 25px;
     p {
+        font-family: ${props => props.theme.font.secondary};
         font-size: ${props => props.size};
         line-height: 100.9%;
         color: #FFFFFF;

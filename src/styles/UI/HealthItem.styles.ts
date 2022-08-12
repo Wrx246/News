@@ -17,6 +17,7 @@ export const HealthWrapBody = styled.div`
     height: auto;
 
     span {
+        font-family: ${props => props.theme.font.secondary};
         font-weight: 400;
         font-size: 10px;
         line-height: 100.9%;
@@ -24,10 +25,10 @@ export const HealthWrapBody = styled.div`
     }
 
     h2 {
-        margin-top: 6px;
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 22px;
+        margin-top: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 17px;
         text-transform: capitalize;
         color: #393939;
     }

@@ -1,19 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import App from './App';
 
 const Global = createGlobalStyle`
 @font-face {
-  font-family: "oswald";
+  font-family: "helvetica";
   src: url(./assets/fonts/oswald/oswald-regular.woff2);
+}
+@font-face {
+  font-family: "sofia";
+  src: url(./assets/fonts/sofiaPro/SofiaProRegular.woff2);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'oswald';
+  font-family: 'helvetica';
   font-style: normal;
   font-weight: 400;
 }
@@ -22,12 +26,21 @@ body {
 }
 `;
 
+const theme = {
+  font: {
+    primary: 'helvetica',
+    secondary: 'sofia',
+  }
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <BrowserRouter>
-    <Global />
-    <App />
+    <ThemeProvider theme={theme}>
+      <Global />
+      <App />
+    </ThemeProvider>
   </BrowserRouter>
 );

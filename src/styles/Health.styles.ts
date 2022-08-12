@@ -29,6 +29,7 @@ export const HealthMainNews = styled.article`
     }
 
     span {
+        font-family: ${props => props.theme.font.secondary};
         margin-top: 25px;
         font-size: 10px;
         line-height: 100.9%;
@@ -44,6 +45,7 @@ export const HealthMainNews = styled.article`
     }
 
     p {
+        font-family: ${props => props.theme.font.secondary};
         margin-top: 6px;
         font-weight: 250;
         font-size: 14px;

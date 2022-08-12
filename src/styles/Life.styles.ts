@@ -32,6 +32,7 @@ export const LifeSectionFirst = styled.article`
         height: 250px;
     }
     span {
+        font-family: ${props => props.theme.font.secondary};
         margin-top: 25px;
         font-size: 12px;
         line-height: 100.9%;
@@ -45,6 +46,7 @@ export const LifeSectionFirst = styled.article`
         color: #393939;
     }
     p {
+        font-family: ${props => props.theme.font.secondary};
         margin-top: 12px;
         font-weight: 250;
         font-size: 14px;
@@ -54,7 +56,7 @@ export const LifeSectionFirst = styled.article`
 `;
 
 export const LifeItem = styled.article`
-    width: 355px;
+    width: 360px;
     height: 92px;
     display: flex;
     margin-top: 25px;
@@ -68,6 +70,7 @@ export const LifeItem = styled.article`
 export const LifeItemTitle = styled.div`
 
     span {
+        font-family: ${props => props.theme.font.secondary};
         font-size: 10px;
         line-height: 100.9%;
         color: #393939;
@@ -76,7 +79,7 @@ export const LifeItemTitle = styled.div`
     h3 {
         font-weight: 400;
         font-size: 16px;
-        line-height: 24px;
+        line-height: 20px;
         color: #393939;
     }
 `;

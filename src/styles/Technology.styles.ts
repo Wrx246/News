@@ -44,6 +44,7 @@ export const TechTitle = styled.div`
     }
 
     p {
+        font-family: ${props => props.theme.font.secondary};
         font-size: 18px;
         line-height: 125.6%;
         color: #FFFFFF;

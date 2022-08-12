@@ -11,6 +11,7 @@ export const SubWrapper = styled.div`
         color: #FFFFFF;
     }
     p {
+        font-family: ${props => props.theme.font.secondary};
         margin-top: 20px;
         font-size: 14px;
         line-height: 149.1%;

@@ -14,6 +14,7 @@ export const ListItemWrap = styled.article`
 export const ListItemBody = styled.div`
     margin-top: 6px;
     span {
+        font-family: ${props => props.theme.font.secondary};
         font-size: 12px;
         line-height: 100.9%;
         color: #393939;
