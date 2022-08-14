@@ -22,6 +22,8 @@ export const NewsList = () => {
       }).finally(() => setIsFetching(false));
   }
 
+  // Добавить SetInterval чтобы каждая новость всплывала по очереди
+
   useEffect(() => {
     document.addEventListener('scroll', scrollHandler);
 
