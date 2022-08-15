@@ -54,6 +54,25 @@ export interface IWeather {
     cod: number
 }   
 
-export interface ICoord {
-    lon: number
+export interface IList {
+    author: string
+    title: string
+    url: string
+    urlToImage: string
+    description: string
+    publishedAt: string | undefined
+}
+
+export interface IExchangeUsd {
+    date?: string
+    usd: {
+        byn: number
+    }
+}
+
+export interface IExchangeEur {
+    date?: string
+    eur: {
+        byn: number
+    }
 }

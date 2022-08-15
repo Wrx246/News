@@ -15,14 +15,14 @@ export const NewsList = () => {
   const country = ['us', 'ru', 'ua', 'lv', 'kr', 'ng', 'br', 'sg'];
 
   const fetchHealth = async (path: string | undefined) => {
-    await API.get(`?pageSize=10&page=${currentPage}&q=${path}&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
+    await API.get(`everything?q=${path}&pageSize=10&page=${currentPage}&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
       .then(res => {
         setHealth([...health, ...res.data.articles])
+        // try this setHealth(health => [...health, res.data.articles])
         setCurrentPage(prevState => prevState + 1)
-      }).finally(() => setIsFetching(false));
+      })
+      .finally(() => setIsFetching(false));
   }
-
-  // Добавить SetInterval чтобы каждая новость всплывала по очереди
 
   useEffect(() => {
     document.addEventListener('scroll', scrollHandler);

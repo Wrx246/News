@@ -1,4 +1,5 @@
 import React from 'react';
+import * as dotenv from 'dotenv'
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';

@@ -1,15 +1,9 @@
 import React from 'react'
 import Moment from 'moment'
 import { ListItemBody, ListItemWrap } from '../styles/UI/ListItem.styles'
+import { IList } from '../types/types'
 
-interface IList {
-    author: string
-    title: string
-    url: string
-    urlToImage: string
-    description: string
-    publishedAt: string | undefined
-}
+
 
 export const ListItem = ({author, title, urlToImage, description, url, publishedAt}: IList) => {
   return <ListItemWrap>
