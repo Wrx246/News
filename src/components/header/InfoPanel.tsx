@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Moment from 'moment';
 import { MoveInfo, PanelInfo, PanelLinks, PanelWrap } from '../../styles/InfoPanel.styles'
-import Icon from '../../assets/images/Facebook.png'
+import Facebook from '../../assets/images/Facebook.png'
+import Twitter from '../../assets/images/Twitter.png'
+import Instagram from '../../assets/images/Instagram.png'
+import Youtube from '../../assets/images/Youtube.png'
 import Clock from '../../assets/images/clock.png'
 import axios from 'axios';
 import { IExchangeEur, IExchangeUsd, IWeather } from '../../types/types';
@@ -49,6 +52,8 @@ export const InfoPanel = () => {
 
 
     const date = new Date();
+    const dollar = usd?.usd.byn;
+    const euro = eur?.eur.byn;
 
     return <PanelWrap>
         <PanelInfo>
@@ -58,15 +63,23 @@ export const InfoPanel = () => {
                     <img src={Clock} alt='clock picture' />
                     <p>{Moment(date).format('dddd, Do MMMM YYYY')}</p>
                 </div>
-                <p>$: {(usd?.usd.byn as number).toFixed(2)}</p>
-                <p>EUR: {(eur?.eur.byn as number).toFixed(2)}</p>
+                <p>$: {dollar?.toFixed(2)}</p>
+                <p>EUR: {euro?.toFixed(2)}</p>
             </MoveInfo>
         </PanelInfo>
         <PanelLinks>
-            <img src={Icon} alt='Facebook link picture' />
-            <img src={Icon} alt='Facebook link picture' />
-            <img src={Icon} alt='Facebook link picture' />
-            <img src={Icon} alt='Facebook link picture' />
+            <a href='https://facebook.com' target='_blank'>
+                <img src={Facebook} alt='Facebook link picture' />
+            </a>
+            <a href='https://twitter.com' target='_blank'>
+                <img src={Twitter} alt='Twitter link picture' />
+            </a>
+            <a href='https://instagram.com' target='_blank'>
+                <img src={Instagram} alt='Instagram link picture' />
+            </a>
+            <a href='https://youtube.com' target='_blank'>
+                <img src={Youtube} alt='Youtube link picture' />
+            </a>
         </PanelLinks>
     </PanelWrap>
 }

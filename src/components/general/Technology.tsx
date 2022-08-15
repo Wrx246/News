@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { API } from '../../API/urlConfig';
-import { LinkCategory, TechBody, TechItemWrap, TechMainNews, TechTitle, TechWrapper } from '../../styles/Technology.styles'
+import {
+    LinkCategory,
+    TechBody,
+    TechItemWrap,
+    TechMainNews,
+    TechTitle,
+    TechWrapper
+} from '../../styles/Technology.styles'
 import { INews } from '../../types/types';
 import { TechItem } from '../../UI/TechItem';
 
@@ -39,13 +46,13 @@ export const Technology = () => {
                     {tech.map((item, index) => {
                         const { author, title, urlToImage, publishedAt, url } = item;
                         return (
-                            <TechItem 
-                            key={index} 
-                            publishedAt={publishedAt} 
-                            author={author} 
-                            title={title} 
-                            url={url}
-                            urlToImage={urlToImage} />
+                            <TechItem
+                                key={index}
+                                publishedAt={publishedAt}
+                                author={author}
+                                title={title}
+                                url={url}
+                                urlToImage={urlToImage} />
                         )
                     })}
                 </TechItemWrap>

@@ -19,7 +19,6 @@ export const NewsList = () => {
     await API.get(`everything?q=${path}&pageSize=10&page=${currentPage}&sortBy=popularity&apiKey=c55971271077494a9bd56c50bd0deca4`)
       .then(res => {
         setHealth([...health, ...res.data.articles])
-        // try this setHealth(health => [...health, res.data.articles])
         setCurrentPage(prevState => prevState + 1)
       })
       .finally(() => setIsFetching(false));

@@ -51,5 +51,11 @@ export const PanelLinks = styled.div`
         width: 24px;
         height: 24px;
         margin: 0px 5px;
+        border-radius: 50%;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
     }
 `;
