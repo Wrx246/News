@@ -60,6 +60,14 @@ export const LifeSectionFirst = styled.article`
         line-height: 111.1%;
         color: rgba(57, 57, 57, 0.6);
     }
+    &:hover {
+        img {
+            opacity: 0.8;
+        }
+        h2 {
+            text-decoration: underline;
+        }
+    }
 `;
 
 export const LifeItem = styled.article`
@@ -71,6 +79,14 @@ export const LifeItem = styled.article`
     img {
         height: 90px;
         width: 120px;
+    }
+    &:hover {
+        img {
+            opacity: 0.8;
+        }
+        h3 {
+            text-decoration: underline;
+        }
     }
 `;
 

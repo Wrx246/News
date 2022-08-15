@@ -10,6 +10,14 @@ export const HealthWrap = styled.article`
         width: 90px;
         height: 70px;
     }
+    &:hover {
+        img {
+            opacity: 0.8;
+        }
+        h2 {
+            text-decoration: underline;
+        }
+    }
 `;
 
 export const HealthWrapBody = styled.div`
@@ -27,9 +35,6 @@ export const HealthWrapBody = styled.div`
     a {
         color: white;
         text-decoration: none;
-        &:hover {
-            color: #484848;
-        }
     }
 
     h2 {
@@ -40,4 +45,5 @@ export const HealthWrapBody = styled.div`
         text-transform: capitalize;
         color: #393939;
     }
+    
 `;

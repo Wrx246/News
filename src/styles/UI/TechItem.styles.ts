@@ -9,6 +9,14 @@ export const ItemWrapper = styled.article`
         height: 100px;
         width: 130px;
     }
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+
+        img {
+            opacity:0.8;
+        }
+    }
 `;
 
 export const ItemTitle = styled.div`
@@ -25,6 +33,7 @@ export const ItemTitle = styled.div`
         color: white;
         text-decoration: none;
         &:hover {
+            text-decoration: underline;
             color: #484848;
         }
     }

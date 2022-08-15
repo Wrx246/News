@@ -29,6 +29,12 @@ export const GeneralBoxFirst = styled.div<IGeneralBox>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover {
+        opacity: 0.8;
+        h3 {
+            text-decoration: underline;
+        }
+    }
 `;
 
 export const GeneralBoxSecond = styled.div<IGeneralBox>`
@@ -46,6 +52,12 @@ export const GeneralBoxSecond = styled.div<IGeneralBox>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover {
+        opacity: 0.8;
+        h3 {
+            text-decoration: underline;
+        }
+    }
 `;
 
 export const GeneralBoxThird = styled.div<IGeneralBox>`
@@ -63,6 +75,12 @@ export const GeneralBoxThird = styled.div<IGeneralBox>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover {
+        opacity: 0.8;
+        h3 {
+            text-decoration: underline;
+        }
+    }
 `;
 
 export const GeneralBoxFourth = styled.div<IGeneralBox>`
@@ -78,6 +96,12 @@ export const GeneralBoxFourth = styled.div<IGeneralBox>`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover {
+        opacity: 0.8;
+        h3 {
+            text-decoration: underline;
+        }
+    }
 `;
 
 export const LinkCategory = styled.div`
@@ -108,9 +132,6 @@ export const LinkTitle = styled.div<ILinkTitle>`
     a {
         color: white;
         text-decoration: none;
-        &:hover {
-            color: #484848;
-        }
     }
     p {
         font-family: ${props => props.theme.font.secondary};

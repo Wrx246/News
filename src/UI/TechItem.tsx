@@ -1,6 +1,7 @@
 import React from 'react'
 import Moment from 'moment'
 import { ItemTitle, ItemWrapper } from '../styles/UI/TechItem.styles'
+import { Link } from 'react-router-dom'
 
 interface ITechItem {
     title: string

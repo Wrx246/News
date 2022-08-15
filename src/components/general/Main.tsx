@@ -9,8 +9,8 @@ export const Main = () => {
         <div>
             {/* <General /> */}
             {/* <Health /> */}
-            <Technology />
-            {/* <Life /> */}
+            {/* <Technology /> */}
+            <Life />
         </div>
     )
 }

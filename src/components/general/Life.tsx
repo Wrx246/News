@@ -75,7 +75,9 @@ export const Life = () => {
                         <img src={life[5].urlToImage} alt={life[5].description} />
                         <LifeItemTitle>
                             <span>{life[5].author} - {Moment(life[5].publishedAt).format('d MMM YYYY')}</span>
-                            <h3>{life[5].title}</h3>
+                            <a target='_blank' href={life[5].url}>
+                                <h3>{life[5].title}</h3>
+                            </a>
                         </LifeItemTitle>
                     </LifeItem>
                 </div>

@@ -26,6 +26,12 @@ export const TechMainNews = styled.article<IMainNews>`
     height: 450px;
     width: 1170px;
     background: url(${props => props.image});
+    &:hover {
+        opacity: 0.8;
+        h3 {
+            text-decoration: underline;
+        }
+    }
 `;
 
 export const TechTitle = styled.div`

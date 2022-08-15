@@ -39,9 +39,6 @@ export const HealthMainNews = styled.article`
     a {
         color: white;
         text-decoration: none;
-        &:hover {
-            color: #484848;
-        }
     }
 
     h2 {
@@ -59,6 +56,14 @@ export const HealthMainNews = styled.article`
         font-size: 14px;
         line-height: 111.1%;
         color: rgba(57, 57, 57, 0.6);
+    }
+    &:hover {
+        img {
+            opacity: 0.8;
+        }
+        h2 {
+            text-decoration: underline;
+        }
     }
 `;
 
