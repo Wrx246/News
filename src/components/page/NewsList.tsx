@@ -5,6 +5,7 @@ import { CountryWrap, NewsListWrap } from '../../styles/NewsList.styles'
 import { INews } from '../../types/types';
 import { ListItem } from '../../UI/ListItem'
 import { NewsCountry } from '../../UI/NewsCountry';
+import { Preloader } from '../../UI/Preloader';
 
 export const NewsList = () => {
   const [health, setHealth] = useState<INews[]>([]);
@@ -48,6 +49,7 @@ export const NewsList = () => {
     }
   }
 
+  if(health.length) {
   return <NewsListWrap>
     {/* <CountryWrap>
       {country.map((item, index) => {
@@ -66,6 +68,7 @@ export const NewsList = () => {
         publishedAt={publishedAt}
       />
     })}
-
   </NewsListWrap>
+  }
+  return <Preloader />
 }

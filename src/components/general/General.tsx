@@ -11,6 +11,7 @@ import {
     LinkTitle
 } from '../../styles/General.styles'
 import { INews } from '../../types/types';
+import { Preloader } from '../../UI/Preloader';
 
 export const General = () => {
     const [general, setGeneral] = useState<INews[]>([]);
@@ -66,5 +67,5 @@ export const General = () => {
             </GeneralBoxFourth>
         </GeneralWrapper>
     }
-    return <></>
+    return <Preloader />
 }
