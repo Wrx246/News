@@ -27,3 +27,15 @@ export const CountryWrap = styled.div`
     gap: 20px;
 `;
 
+export const LoadNewsButton = styled.button`
+    border: none;
+    height: 40px;
+    font-size: 17px;
+    &:hover {
+        cursor: pointer;
+        background-color: #c7c5c5;
+    }
+    &:active {
+        background-color: #919191;
+    }
+`;
