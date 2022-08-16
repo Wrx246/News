@@ -7,9 +7,9 @@ import { Technology } from './Technology'
 export const Main = () => {
     return (
         <div>
-            {/* <General /> */}
-            {/* <Health /> */}
-            {/* <Technology /> */}
+            <General />
+            <Health />
+            <Technology />
             <Life />
         </div>
     )
